@@ -11,7 +11,7 @@ from torch import nn
 from torch.utils.data import DataLoader
 
 try:
-    from .model_dnn import PooledDNN
+    from .model import PooledDNN
     from .train import (
         COHORTS,
         SHARED_COLUMNS,
@@ -25,7 +25,7 @@ try:
         set_seed,
     )
 except ImportError:
-    from model_dnn import PooledDNN
+    from model import PooledDNN
     from train import (
         COHORTS,
         SHARED_COLUMNS,

@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 from utils1 import EarlyStopping,ICITransferTrainer
 from autoencoder import Autoencoder
-from ICIMTL_model import ICIMTL
+from model import ICIMTL
 from ICIdataset import ICIProcessor, ICIDataset
 import matplotlib.pyplot as plt
 from joblib import load
