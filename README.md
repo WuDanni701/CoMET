@@ -61,14 +61,14 @@ Model performance is evaluated using five-fold stratified cross-validation. Conv
 ## Repository Structure
 
 ```text
-ICIMTL/
+CoMET/
 │
 ├── README.md
 ├── requirements.txt
 │
-├── ICIMTL/
+├── CoMET/
 │   ├── compare_with_baselinemodel.py   # Main CoMET training and baseline comparison
-│   ├── ICIMTL_model.py                 # CoMET model architecture
+│   ├── model.py                 # CoMET model architecture
 │   ├── ICIdataset.py                   # Data loading and PyTorch dataset
 │   ├── autoencoder.py                  # RNA autoencoder architecture
 │   ├── DNN.py                          # Basic DNN modules
