@@ -150,8 +150,8 @@ The main experiments were developed with Python 3.10 and PyTorch 2.3.1.
 Clone the repository:
 
 ```bash
-git clone https://github.com/WuDanni701/ICIMTL.git
-cd ICIMTL
+git clone https://github.com/WuDanni701/CoMET.git
+cd CoMET
 ```
 
 Create a virtual environment if desired:
