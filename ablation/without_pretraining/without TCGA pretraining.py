@@ -8,7 +8,7 @@ import pandas as pd
 from utils_notcga import EarlyStopping, ICITrainer
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 _ABLATION_DIR = REPOSITORY_ROOT / "ablation"
-_ICIMTL_DIR = REPOSITORY_ROOT / "ICIMTL"
+_ICIMTL_DIR = REPOSITORY_ROOT / "CoMET"
 if str(_ABLATION_DIR) not in sys.path:
     sys.path.insert(0, str(_ABLATION_DIR))
 if str(_ICIMTL_DIR) not in sys.path:
@@ -104,7 +104,7 @@ def compute_all_metrics(y_true,y_prob,threshold = None):
 
 def five_fold_cross_validation():
     #read in data
-    output_dir =  "output/ablation_without_pretraining"
+    output_dir = REPOSITORY_ROOT / "outputs" / "ablation_without_pretraining"
     output_dir.mkdir(parents=True, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")

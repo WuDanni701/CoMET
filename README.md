@@ -2,7 +2,7 @@
 
 The implementation integrates transcriptomic representations learned from TCGA, cohort-shared clinical/genomic covariates, cohort-specific variables, and a Multi-gate Mixture-of-Experts (MMoE) backbone with cohort-specific prediction heads.
 
-> The source-code module is retained under the historical `ICIMTL/` directory name for compatibility with the original implementation.
+> The main source-code module is located in the `CoMET/` directory.
 
 ---
 
@@ -195,12 +195,12 @@ openpyxl
 Core package versions used in the reported environment include:
 
 ```text
-Python          3.10
-PyTorch         2.3.1
-NumPy           1.26.4
-pandas          2.2.2
-scikit-learn    1.7.1
-XGBoost         2.1.1
+Python         
+PyTorch         
+NumPy          
+pandas          
+scikit-learn   
+XGBoost        
 ```
 
 ---
@@ -346,7 +346,7 @@ This procedure avoids using validation-set information when estimating preproces
 The main training procedure is implemented in:
 
 ```text
-ICIMTL/compare_with_baselinemodel.py
+CoMET/compare_with_baselinemodel.py
 ```
 
 Five-fold cross-validation is performed using joint cohort-response stratification:
@@ -373,10 +373,7 @@ Under this setting:
 - cohort-specific class weights are estimated from each training fold; and
 - model selection is based on mean validation AUROC across tasks.
 
-The main implementation uses a fixed random seed of:
 
-```text
-269
 ```
 
 ---
@@ -480,6 +477,7 @@ Current script:
 ```bash
 python "ablation/without_pretraining/without TCGA pretraining.py"
 ```
+
 
 ### Transcriptomic-only model
 
@@ -587,7 +585,7 @@ best_model_fold_4.pth
 From the repository root, run:
 
 ```bash
-python ICIMTL/compare_with_baselinemodel.py
+python CoMET/compare_with_baselinemodel.py
 ```
 
 The script:
@@ -619,7 +617,7 @@ when CUDA is available.
 If GPU 7 is unavailable, change the device definition in:
 
 ```text
-ICIMTL/compare_with_baselinemodel.py
+CoMET/compare_with_baselinemodel.py
 ```
 
 to an available device such as:

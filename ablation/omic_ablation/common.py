@@ -21,7 +21,7 @@ from torch.utils.data import DataLoader
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 ABLATION_DIR = REPOSITORY_ROOT / "ablation"
-ICIMTL_DIR = REPOSITORY_ROOT / "ICIMTL"
+ICIMTL_DIR = REPOSITORY_ROOT / "CoMET"
 for path in (ABLATION_DIR, ICIMTL_DIR):
     if str(path) not in sys.path:
         sys.path.insert(0, str(path))
